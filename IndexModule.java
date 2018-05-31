@@ -1,7 +1,7 @@
 //============================================================================
 // Name        : IndexModule.java
 // Author      : Srilakshmi Sruthi Pasumarthy
-// Description : This class implements crawler functionality. 
+// Description : This class illustrates the implementation of Indexing methodology over all the documents in a document collection.
 //============================================================================
 
 import java.io.BufferedReader;
@@ -44,11 +44,7 @@ import org.jsoup.select.Elements;
 public class IndexModule {
 
 	private static String filesPath; 
-
-	/*
-	 * Author: Srilakshmi Sruthi Pasumarthy
-	 * This class is illustrates the application of Indexing methodology over all the documents in a document collection. 
-	 */
+	
    	private static void createFilesFromURLs(String indexPath, List<CrawledURL> urlList) throws FileNotFoundException, IOException, SocketTimeoutException
 	{
    	 /*
@@ -257,8 +253,8 @@ public class IndexModule {
        /*
     	* This method implements creation of index and stemming functionality.
     	* @Params: 'indexPath' - input of type String - specifies the path where index is stored
-   	    * 'urlList' - collection input(ArrayList of type 'CrawledURL') - specifies the list of crawled URLs 
-   	    * along with their depths
+   	* 'urlList' - collection input(ArrayList of type 'CrawledURL') - specifies the list of crawled URLs 
+   	* along with their depths
     	*/
     	try {
     		createFilesFromURLs(indexPath, urlList);
