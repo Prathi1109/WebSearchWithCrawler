@@ -1,13 +1,15 @@
-   /*
-	* Author: Srilakshmi Sruthi Pasumarthy
-	* This class includes the invocation of all the methods to implement Crawler, Normalizing URLs, Indexing crawled pages, 
-	* Searching, Stemming and Ranking functionalities over a crawled collection from a Seed URL. The variables/attributes used in the class are-
-	* 'seedURL': of type String- the URL which has to be crawled based on the crawl depth;
-	* 'crawlDepth' : of type Integer - the maximum depth of pages to be accessed from the seed URL as the base point
-	* 'indexPath' : of type String- the path where indexed documents are to be stored;
-	* 'query' : of type String- search query;
-	* 'crawledURLs' : of type 'CrawledURL' -an ArrayList of custom datatype to access the crawled URLs along with their depths
-	*/
+//============================================================================
+// Name        : CrawledURL.java
+// Author      : Srilakshmi Sruthi Pasumarthy
+// Description : This class includes the invocation of all the methods to implement Crawler, Normalizing URLs, Indexing crawled pages, 
+//		 Searching, Stemming and Ranking functionalities over a crawled collection from a Seed URL. The variables/attributes used in the class are-
+//	 	'seedURL': of type String- the URL which has to be crawled based on the crawl depth;
+//		'crawlDepth' : of type Integer - the maximum depth of pages to be accessed from the seed URL as the base point
+//		'indexPath' : of type String- the path where indexed documents are to be stored;
+//		'query' : of type String- search query;
+//		'crawledURLs' : of type 'CrawledURL' -an ArrayList of custom datatype to access the crawled URLs along with their depths
+//============================================================================   
+
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Scanner;
