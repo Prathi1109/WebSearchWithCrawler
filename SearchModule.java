@@ -1,4 +1,8 @@
-package com.ir.programming.task2;
+//============================================================================
+// Name        : SearchModule.java
+// Author      : Srilakshmi Sruthi Pasumarthy
+// Description : This class implements Searching(Index Search) methodology over the indexed documents. 
+//============================================================================
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -20,11 +24,6 @@ import org.apache.lucene.store.FSDirectory;
 
 public class SearchModule {
 
-	/*
-	 * Author: Srilakshmi Sruthi Pasumarthy
-	 * This class is used to apply Searching(Index Search) methodology over the indexed documents. 
-	 */
-	
 	public void search(String indexPath, String userQuery)
 	{ /*
 	   * This method is used to perform search operation on the 'userQuery' over the indexed documents.
