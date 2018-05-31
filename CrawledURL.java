@@ -4,8 +4,6 @@
 // Description : This class is used as a custom data structure- has two attributes crawled URL and it's depth.
 //============================================================================
 
-package com.ir.programming.task2;
-
 public class CrawledURL implements Comparable<CrawledURL>{
 
 	public int depth;
