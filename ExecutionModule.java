@@ -1,5 +1,5 @@
 //============================================================================
-// Name        : CrawledURL.java
+// Name        : ExecutionModule.java
 // Author      : Srilakshmi Sruthi Pasumarthy
 // Description : This class includes the invocation of all the methods to implement Crawler, Normalizing URLs, Indexing crawled pages, 
 //		 Searching, Stemming and Ranking functionalities over a crawled collection from a Seed URL. The variables/attributes used in the class are-
