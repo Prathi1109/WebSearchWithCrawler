@@ -1,11 +1,13 @@
+//============================================================================
+// Name        : CrawledURL.java
+// Author      : Srilakshmi Sruthi Pasumarthy
+// Description : This class is used as a custom data structure- has two attributes crawled URL and it's depth.
+//============================================================================
+
 package com.ir.programming.task2;
 
 public class CrawledURL implements Comparable<CrawledURL>{
 
-   /*
-	* Author: Srilakshmi Sruthi Pasumarthy
-	* This class is used as a custom data structure- has two attributes crawled URL and it's depth. 
-	*/
 	public int depth;
 	public String url;
 	
