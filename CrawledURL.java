@@ -4,7 +4,7 @@ public class CrawledURL implements Comparable<CrawledURL>{
 
    /*
 	* Author: Srilakshmi Sruthi Pasumarthy
-	* This class is used as a custom data structure to store the crawled URL and it's depth. 
+	* This class is used as a custom data structure- has two attributes crawled URL and it's depth. 
 	*/
 	public int depth;
 	public String url;
