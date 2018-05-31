@@ -4,8 +4,6 @@
 // Description : This class implements crawler functionality. 
 //============================================================================
 
-package com.ir.programming.task2;
-
 import java.util.ArrayList;
 import java.util.List;
 
