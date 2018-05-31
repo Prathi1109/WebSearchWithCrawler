@@ -1,3 +1,9 @@
+//============================================================================
+// Name        : Crawler.java
+// Author      : Srilakshmi Sruthi Pasumarthy
+// Description : This class implements crawler functionality. 
+//============================================================================
+
 package com.ir.programming.task2;
 
 import java.util.ArrayList;
@@ -11,11 +17,6 @@ import org.jsoup.select.Elements;
 import java.net.SocketTimeoutException;
 
 public class Crawler {
-	
-	/*
-	 * Author: Srilakshmi Sruthi Pasumarthy
-	 * This class implements crawler functionality. 
-	 */
 
 	private static int maxDepth;
 	
