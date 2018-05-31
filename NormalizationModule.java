@@ -1,7 +1,7 @@
 //============================================================================
 // Name        : NormalizationModule.java
 // Author      : Srilakshmi Sruthi Pasumarthy
-// Description : This class illustrates the implementation of Indexing methodology over all the documents in a document collection.
+// Description : This class illustrates the implementation of URL Normalization.
 //============================================================================
 
 import java.io.FileNotFoundException;
@@ -17,11 +17,6 @@ import java.util.List;
 import java.util.Map;
 
 public class NormalizationModule {
-	
-	/*
-	 * Author: Srilakshmi Sruthi Pasumarthy
-	 * This class illustrates the implementation of URL Normalization
-	 */
 
 	private static List<CrawledURL> links;
 	
@@ -76,23 +71,23 @@ public class NormalizationModule {
 		* This method is used to validate a URL
 		* @Params - 'url' - input of type String - specifies the URL which has to be validated
 		*/
-        try {
-            new URL(url).toURI();
-            return true;
-        }
-        catch (URISyntaxException e) 
-        {
-            return false;
-        }
- 
-        catch (MalformedURLException e) 
-        {
-            return false;
-        }
-        catch(Exception e) 
-        {
-        	return false;
-        }
+		try {
+		    new URL(url).toURI();
+		    return true;
+		}
+		catch (URISyntaxException e) 
+		{
+		    return false;
+		}
+
+		catch (MalformedURLException e) 
+		{
+		    return false;
+		}
+		catch(Exception e) 
+		{
+			return false;
+		}
 	}
 	
 	public static List<CrawledURL> removeDuplicates(List<CrawledURL> listWithDuplicates)
