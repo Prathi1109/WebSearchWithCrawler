@@ -1,4 +1,8 @@
-package com.ir.programming.task2;
+//============================================================================
+// Name        : RankModule.java
+// Author      : Srilakshmi Sruthi Pasumarthy
+// Description : This class illustrates the application of Vector Space Ranking Model.
+//============================================================================
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -19,21 +23,16 @@ import org.apache.lucene.search.similarities.ClassicSimilarity;
 import org.apache.lucene.store.FSDirectory;
 
 public class RankModule {
-	
-	/*
-	 * Author: Srilakshmi Sruthi Pasumarthy
-	 * This class illustrates the application of Vector Space Ranking Model
-	 */
 
 	private static int maxHits = 5000;
 	
 	public void ranking(String indexPath, String query)
 	{
-	   /*
+	       /*
 		* This method is used to apply Vector Space model for ranking the retrieved documents with relevance score.
-	    * documents(the documents that are retrieved based on the search query).
-	    * @Params: 'indexPath' - input of type String - to access the indexed documents
-	    * 'query' - input of type String - search query given by the user
+	    	* documents(the documents that are retrieved based on the search query).
+	    	* @Params: 'indexPath' - input of type String - to access the indexed documents
+	    	* 'query' - input of type String - search query given by the user
 		*/
 		String field = "contents";
 		int counter = 0;
