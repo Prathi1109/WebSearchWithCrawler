@@ -1,4 +1,8 @@
-
+//============================================================================
+// Name        : IndexModule.java
+// Author      : Srilakshmi Sruthi Pasumarthy
+// Description : This class implements crawler functionality. 
+//============================================================================
 
 import java.io.BufferedReader;
 import java.io.File;
