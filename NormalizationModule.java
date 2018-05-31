@@ -1,4 +1,8 @@
-package com.ir.programming.task2;
+//============================================================================
+// Name        : NormalizationModule.java
+// Author      : Srilakshmi Sruthi Pasumarthy
+// Description : This class illustrates the implementation of Indexing methodology over all the documents in a document collection.
+//============================================================================
 
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
