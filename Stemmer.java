@@ -1,4 +1,8 @@
-package com.ir.programming.task2;
+//============================================================================
+// Name        : Stemmer.java
+// Author      : Srilakshmi Sruthi Pasumarthy
+// Description : This class illustrates the implementation of Porter Stemmer algorithm.
+//============================================================================
 
 import java.io.File;
 import java.io.IOException;
@@ -16,11 +20,7 @@ import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 import org.tartarus.snowball.ext.PorterStemmer;
 
 public class Stemmer {
-	/*
-	 * Author: Srilakshmi Sruthi Pasumarthy
-	 * This class is used to apply Porter Stemmer algorithm over a document collection. 
-	 * The purpose is to stem all the words using this algorithm.
-	 */
+
 	private static String stemming(String token)
 	{
 		/*
@@ -51,28 +51,43 @@ public class Stemmer {
 		List<String> result = new ArrayList<String>();
 		for (int i = 0; i < listOfFiles.length; i++) {
 			File file = listOfFiles[i];
-			if (file.isFile() && (file.getName().endsWith(".txt") || file.getName().endsWith(".html"))) { //Retrieve all the files of type .txt and .html
+			
+			//Retrieve all the files of type .txt and .html
+			if (file.isFile() && (file.getName().endsWith(".txt") || file.getName().endsWith(".html"))) { 
 				Path filePath = file.toPath();
 				byte[] encoded = null;
-				try {
-					encoded = Files.readAllBytes(filePath); //Reading each files into byte to convert all the bytes into a String
-				} catch (IOException e) {
+				try 
+				{
+					//Reading each files into byte to convert all the bytes into a String
+					encoded = Files.readAllBytes(filePath); 
+				} 
+				catch (IOException e) 
+				{
 					e.printStackTrace();
 				}
 				String wordsSet = new String(encoded);
-				Analyzer analyzer = new StandardAnalyzer(); //Used to build tokens using one of it's member functions
+				
+				//StandardAnalyser -used to build tokens using one of it's member functions
+				Analyzer analyzer = new StandardAnalyzer(); 
 				TokenStream stream = analyzer.tokenStream(null, new StringReader(wordsSet));
-				try {
+				try 
+				{
 					stream.reset();
-				} catch (IOException e) {
+				}
+				catch (IOException e)
+				{
 					e.printStackTrace();
 				}
-				try {
-					while(stream.incrementToken()) //Iterate over the tokenStream to add each token into a collection (ArrayList<String>(), in this case)
+				try 
+				{
+					//Iterate over the tokenStream to add each token into a collection (ArrayList<String>(), in this case)
+					while(stream.incrementToken()) 
 					{
 						tokens.add(stream.getAttribute(CharTermAttribute.class).toString());
 					}
-				} catch (IOException e) {
+				} 
+				catch (IOException e) 
+				{
 					e.printStackTrace();
 				}
 				analyzer.close();
@@ -81,7 +96,8 @@ public class Stemmer {
 		for(String t: tokens) //Iterate over the token collection to perform stemming on each token
 		{
 			String stemmedTerm = stemming(t);  
-			result.add(stemmedTerm); //Stemmed terms are maintained in another collection(again ArrayList<String>, in this case)
+			//Stemmed terms are maintained in another collection(again ArrayList<String>, in this case)
+			result.add(stemmedTerm); 
 		}
 		
 		System.out.println("Porter Stemmer algorithm has been applied successfully");
